@@ -45,10 +45,10 @@ class SYHomeViewController: SYBaseViewController,UITableViewDataSource,UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         let model = datas?[indexPath.row] as? Dictionary<String,AnyObject>
-        let name = model?["name"]
-        let mobile = model?["mobile"]
+        let name = model?["name"] as? String ?? ""
+        let mobile = model?["mobile"] as? String ?? ""
 //        cell?.textLabel?.text = "\(model["name"]!)---\(model["mobile"]!)"
-        cell?.textLabel?.text = "\(name!)---\(mobile)"
+        cell?.textLabel?.text = "\(name)---\(mobile)"
         return cell!
     }
 }
