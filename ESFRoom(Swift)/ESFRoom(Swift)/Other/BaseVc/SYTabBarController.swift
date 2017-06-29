@@ -12,7 +12,7 @@ class SYTabBarController: UITabBarController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        let homeVc = SYHomeViewController(nibName:NSStringFromClass(SYHomeViewController.self).components(separatedBy: ".").last!, bundle: nil)
+        let homeVc = CRMHomeViewController(nibName:CRMHomeViewController.sy_classNameString(), bundle: nil)
         homeVc.title = "首页"
         let nav = SYNavigationController(rootViewController: homeVc)
         addChildViewController(nav)
@@ -24,13 +24,12 @@ class SYTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.barTintColor = UIColor.lightGray
-        view.backgroundColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
+
     
 }

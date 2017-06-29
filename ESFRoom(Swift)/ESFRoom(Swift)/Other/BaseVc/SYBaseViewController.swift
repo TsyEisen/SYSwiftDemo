@@ -12,7 +12,8 @@ class SYBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        extendedLayoutIncludesOpaqueBars = false;
+        edgesForExtendedLayout = []
     }
 
     override func didReceiveMemoryWarning() {
