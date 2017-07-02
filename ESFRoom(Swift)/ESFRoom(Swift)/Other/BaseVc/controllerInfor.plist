@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>首页</string>
+		<key>image</key>
+		<string>home</string>
+		<key>controller</key>
+		<string>CRMHomeViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>工作台</string>
+		<key>image</key>
+		<string>workBench</string>
+		<key>controller</key>
+		<string>CRMWorkBenchViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string></string>
+		<key>image</key>
+		<string></string>
+		<key>controller</key>
+		<string>SYBaseViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>消息</string>
+		<key>image</key>
+		<string>msg</string>
+		<key>controller</key>
+		<string>CRMMessageViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>我的</string>
+		<key>image</key>
+		<string>my</string>
+		<key>controller</key>
+		<string>CRMMineViewController</string>
+	</dict>
+</array>
+</plist>

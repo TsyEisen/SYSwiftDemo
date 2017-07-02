@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -30,12 +30,20 @@
                             <constraint firstAttribute="height" constant="0.5" id="DM3-r4-PUU"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;前三名&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjm-Ac-3fI">
+                        <rect key="frame" x="243.5" y="14.5" width="56.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="HEm-V6-fch" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ady-IK-MqD"/>
                     <constraint firstItem="gbq-A5-tf9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IcL-gs-q3S"/>
+                    <constraint firstAttribute="trailing" secondItem="Hjm-Ac-3fI" secondAttribute="trailing" constant="20" id="egQ-ys-Wux"/>
                     <constraint firstAttribute="bottom" secondItem="gbq-A5-tf9" secondAttribute="bottom" id="eiX-Lq-XTq"/>
                     <constraint firstItem="HEm-V6-fch" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gHX-5u-VOl"/>
+                    <constraint firstItem="Hjm-Ac-3fI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jLy-6t-OIh"/>
                     <constraint firstAttribute="trailing" secondItem="gbq-A5-tf9" secondAttribute="trailing" id="mbW-RF-PzU"/>
                 </constraints>
             </tableViewCellContentView>

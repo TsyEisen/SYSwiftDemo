@@ -12,10 +12,24 @@ class SYTabBarController: UITabBarController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        let homeVc = CRMHomeViewController(nibName:CRMHomeViewController.sy_classNameString(), bundle: nil)
-        homeVc.title = "首页"
-        let nav = SYNavigationController(rootViewController: homeVc)
-        addChildViewController(nav)
+        
+        tabBar.tintColor = UIColor.appMainColor()
+        tabBar.barTintColor = UIColor.white
+        tabBar.backgroundColor = UIColor.white
+        
+        addBtn.addTarget(self, action:Selector("addNewMessage"), for: .touchUpInside)
+        tabBar.addSubview(addBtn)
+        
+        let array = NSArray(contentsOfFile: Bundle.main.path(forResource: "controllerInfor", ofType: ".plist")!)!
+        for info in array {
+            
+            let vcInfor = info as! Dictionary<String, String>
+            let controller = vcInfor["controller"]
+            let title = vcInfor["title"]
+            let image = vcInfor["image"]
+            
+            addchildviewController(controller: controller, title: title, image: image)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,10 +40,64 @@ class SYTabBarController: UITabBarController {
         super.viewDidLoad()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        for i in 0..<tabBar.items!.count {
+            let item = tabBar.items![i]
+            if i == 2 {
+                item.isEnabled = false
+                break
+            }
+        }
         
     }
-
+    
+    private func addchildviewController(controller:String?,title:String?,image:String?) {
+        
+        var childVC = SYBaseViewController()
+        
+        if title == "首页" {
+            childVC = CRMHomeViewController(nibName: controller, bundle: nil)
+        }
+        
+        if title == "工作台" {
+            childVC = CRMWorkBenchViewController(nibName: controller, bundle: nil)
+        }
+        
+        if title == "消息" {
+            childVC = CRMMessageViewController(nibName: controller, bundle: nil)
+        }
+        
+        if title == "我的" {
+            childVC = CRMMineViewController(nibName: controller, bundle: nil)
+        }
+        
+        if title!.count > 0 {
+            childVC.title = title
+            childVC.tabBarItem.image = UIImage(named: image!)
+            childVC.tabBarItem.selectedImage = UIImage(named: image! + "_hover")
+        }else {
+            childVC.tabBarItem.isEnabled = false
+        }
+        
+        let nav = SYNavigationController(rootViewController: childVC)
+        
+        addChildViewController(nav)
+    }
+    
+    private func addNewMessage() {
+        print("发布")
+    }
+    
+    private lazy var addBtn:UIButton = {
+        
+       let btn = UIButton(frame:CGRect(x:(ScreenW - 49)*0.5, y: 5.5, width: 49, height: 38))
+        
+        btn.setBackgroundImage(UIImage(named:"add"), for: UIControlState.normal)
+        btn.setBackgroundImage(UIImage(named:"add_hover"), for: UIControlState.highlighted)
+        
+        return btn
+    }()
     
 }

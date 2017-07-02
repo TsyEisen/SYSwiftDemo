@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2F7E5F1F07FCCB00F60F20 /* CRMWorkBenchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F7E5D1F07FCCB00F60F20 /* CRMWorkBenchViewController.swift */; };
+		9F2F7E601F07FCCB00F60F20 /* CRMWorkBenchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2F7E5E1F07FCCB00F60F20 /* CRMWorkBenchViewController.xib */; };
+		9F2F7E671F07FF4C00F60F20 /* CRMMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F7E651F07FF4C00F60F20 /* CRMMessageViewController.swift */; };
+		9F2F7E681F07FF4C00F60F20 /* CRMMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2F7E661F07FF4C00F60F20 /* CRMMessageViewController.xib */; };
+		9F2F7E6B1F07FF5E00F60F20 /* CRMMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F7E691F07FF5E00F60F20 /* CRMMineViewController.swift */; };
+		9F2F7E6C1F07FF5E00F60F20 /* CRMMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2F7E6A1F07FF5E00F60F20 /* CRMMineViewController.xib */; };
+		9F2F7E6E1F0801E200F60F20 /* controllerInfor.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F2F7E6D1F0801E200F60F20 /* controllerInfor.plist */; };
 		F069E2841F02099100818AB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069E2831F02099100818AB5 /* AppDelegate.swift */; };
 		F069E28B1F02099100818AB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F069E28A1F02099100818AB5 /* Assets.xcassets */; };
 		F069E28E1F02099100818AB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F069E28C1F02099100818AB5 /* LaunchScreen.storyboard */; };
@@ -48,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F2F7E5D1F07FCCB00F60F20 /* CRMWorkBenchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMWorkBenchViewController.swift; sourceTree = "<group>"; };
+		9F2F7E5E1F07FCCB00F60F20 /* CRMWorkBenchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CRMWorkBenchViewController.xib; sourceTree = "<group>"; };
+		9F2F7E651F07FF4C00F60F20 /* CRMMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMMessageViewController.swift; sourceTree = "<group>"; };
+		9F2F7E661F07FF4C00F60F20 /* CRMMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CRMMessageViewController.xib; sourceTree = "<group>"; };
+		9F2F7E691F07FF5E00F60F20 /* CRMMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMMineViewController.swift; sourceTree = "<group>"; };
+		9F2F7E6A1F07FF5E00F60F20 /* CRMMineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CRMMineViewController.xib; sourceTree = "<group>"; };
+		9F2F7E6D1F0801E200F60F20 /* controllerInfor.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = controllerInfor.plist; sourceTree = "<group>"; };
 		F069E2801F02099100818AB5 /* ESFRoom(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ESFRoom(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F069E2831F02099100818AB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F069E28A1F02099100818AB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +115,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F2F7E5B1F07FC8300F60F20 /* Workbench */ = {
+			isa = PBXGroup;
+			children = (
+				9F2F7E5C1F07FC8300F60F20 /* View */,
+				9F2F7E5D1F07FCCB00F60F20 /* CRMWorkBenchViewController.swift */,
+				9F2F7E5E1F07FCCB00F60F20 /* CRMWorkBenchViewController.xib */,
+			);
+			path = Workbench;
+			sourceTree = "<group>";
+		};
+		9F2F7E5C1F07FC8300F60F20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F2F7E611F07FF3700F60F20 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				9F2F7E621F07FF3700F60F20 /* View */,
+				9F2F7E651F07FF4C00F60F20 /* CRMMessageViewController.swift */,
+				9F2F7E661F07FF4C00F60F20 /* CRMMessageViewController.xib */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		9F2F7E621F07FF3700F60F20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F2F7E631F07FF3700F60F20 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				9F2F7E641F07FF3700F60F20 /* View */,
+				9F2F7E691F07FF5E00F60F20 /* CRMMineViewController.swift */,
+				9F2F7E6A1F07FF5E00F60F20 /* CRMMineViewController.xib */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		9F2F7E641F07FF3700F60F20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F069E2771F02099000818AB5 = {
 			isa = PBXGroup;
 			children = (
@@ -120,11 +185,10 @@
 		F069E2821F02099100818AB5 /* ESFRoom(Swift) */ = {
 			isa = PBXGroup;
 			children = (
+				9F2F7E611F07FF3700F60F20 /* Message */,
+				9F2F7E631F07FF3700F60F20 /* Mine */,
+				9F2F7E5B1F07FC8300F60F20 /* Workbench */,
 				F0C720E71F04970F00ADECDF /* Home */,
-				F0C720ED1F04970F00ADECDF /* Bench */,
-				F0C720EB1F04970F00ADECDF /* Message */,
-				F0C720E91F04970F00ADECDF /* Mine */,
-				F0C720EF1F04970F00ADECDF /* Model */,
 				F0C720F01F0497B000ADECDF /* Other */,
 				F069E2831F02099100818AB5 /* AppDelegate.swift */,
 				F069E28A1F02099100818AB5 /* Assets.xcassets */,
@@ -157,58 +221,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F0C720E91F04970F00ADECDF /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				F0C720EA1F04970F00ADECDF /* View */,
-			);
-			path = Mine;
-			sourceTree = "<group>";
-		};
-		F0C720EA1F04970F00ADECDF /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F0C720EB1F04970F00ADECDF /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				F0C720EC1F04970F00ADECDF /* View */,
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
-		F0C720EC1F04970F00ADECDF /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F0C720ED1F04970F00ADECDF /* Bench */ = {
-			isa = PBXGroup;
-			children = (
-				F0C720EE1F04970F00ADECDF /* View */,
-			);
-			path = Bench;
-			sourceTree = "<group>";
-		};
-		F0C720EE1F04970F00ADECDF /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F0C720EF1F04970F00ADECDF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		F0C720F01F0497B000ADECDF /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +238,7 @@
 				F0C720F21F0497B000ADECDF /* SYBaseViewController.swift */,
 				F0C720F51F0497B000ADECDF /* SYNavigationController.swift */,
 				F0C720F61F0497B000ADECDF /* SYTabBarController.swift */,
+				9F2F7E6D1F0801E200F60F20 /* controllerInfor.plist */,
 			);
 			path = BaseVc;
 			sourceTree = "<group>";
@@ -335,7 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F09FFAD01F04E38500BE8342 /* CRMHomeMainCell.xib in Resources */,
+				9F2F7E6C1F07FF5E00F60F20 /* CRMMineViewController.xib in Resources */,
+				9F2F7E601F07FCCB00F60F20 /* CRMWorkBenchViewController.xib in Resources */,
+				9F2F7E6E1F0801E200F60F20 /* controllerInfor.plist in Resources */,
 				F09FFAD41F04E39600BE8342 /* CRMHomeTitleCell.xib in Resources */,
+				9F2F7E681F07FF4C00F60F20 /* CRMMessageViewController.xib in Resources */,
 				F069E28E1F02099100818AB5 /* LaunchScreen.storyboard in Resources */,
 				F09FFACC1F04D7F400BE8342 /* CRMHomeHeaderView.xib in Resources */,
 				F0B4D12B1F05007A000826F3 /* CRMHomeViewController.xib in Resources */,
@@ -366,12 +383,15 @@
 				F09FFAB91F049AC600BE8342 /* MultipartFormData.swift in Sources */,
 				F09FFABA1F049AC600BE8342 /* NetworkReachabilityManager.swift in Sources */,
 				F09FFABB1F049AC600BE8342 /* Notifications.swift in Sources */,
+				9F2F7E5F1F07FCCB00F60F20 /* CRMWorkBenchViewController.swift in Sources */,
 				F09FFABC1F049AC600BE8342 /* ParameterEncoding.swift in Sources */,
 				F09FFABD1F049AC600BE8342 /* Request.swift in Sources */,
+				9F2F7E6B1F07FF5E00F60F20 /* CRMMineViewController.swift in Sources */,
 				F09FFABE1F049AC600BE8342 /* Response.swift in Sources */,
 				F09FFABF1F049AC600BE8342 /* ResponseSerialization.swift in Sources */,
 				F09FFAC01F049AC600BE8342 /* Result.swift in Sources */,
 				F09FFAC11F049AC600BE8342 /* ServerTrustPolicy.swift in Sources */,
+				9F2F7E671F07FF4C00F60F20 /* CRMMessageViewController.swift in Sources */,
 				F0B4D1251F04EADE000826F3 /* UITableView+SYExtension.swift in Sources */,
 				F09FFAC21F049AC600BE8342 /* SessionDelegate.swift in Sources */,
 				F09FFAC31F049AC600BE8342 /* SessionManager.swift in Sources */,
