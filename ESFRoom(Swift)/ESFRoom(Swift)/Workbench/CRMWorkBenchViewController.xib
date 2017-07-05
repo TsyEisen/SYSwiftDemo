@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CRMWorkBenchViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CRMWorkBenchViewController" customModule="ESFRoom_Swift_" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="7tk-6s-Jgd" id="fbj-6H-JUX"/>
+                <outlet property="topView" destination="a5S-hg-iqP" id="xN6-0O-kP0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +20,100 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5S-hg-iqP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="df0-f8-lXj">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="110"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wya-16-Ce6">
+                                    <rect key="frame" x="58" y="0.0" width="70" height="110"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="XfU-6l-FpN"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <inset key="titleEdgeInsets" minX="-40" minY="65" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="15" minY="-30" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="线索顾客" image="workBench_thread">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="threadClient" destination="-1" eventType="touchUpInside" id="dXV-qh-bBb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="wya-16-Ce6" secondAttribute="bottom" id="Mxk-Dk-jaJ"/>
+                                <constraint firstItem="wya-16-Ce6" firstAttribute="top" secondItem="df0-f8-lXj" secondAttribute="top" id="fYn-NF-R4f"/>
+                                <constraint firstItem="wya-16-Ce6" firstAttribute="centerX" secondItem="df0-f8-lXj" secondAttribute="centerX" id="nEB-6g-S0B"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liH-g9-f7n">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="110"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntf-J4-MeX">
+                                    <rect key="frame" x="59" y="0.0" width="70" height="110"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="O5h-xt-EZt"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <inset key="titleEdgeInsets" minX="-40" minY="65" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="15" minY="-30" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="签约客户" image="workBench_sign">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="signClient" destination="-1" eventType="touchUpInside" id="H2R-ds-nb1"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ntf-J4-MeX" firstAttribute="top" secondItem="liH-g9-f7n" secondAttribute="top" id="1KH-ei-bhB"/>
+                                <constraint firstItem="ntf-J4-MeX" firstAttribute="centerX" secondItem="liH-g9-f7n" secondAttribute="centerX" id="59d-S3-zjo"/>
+                                <constraint firstAttribute="bottom" secondItem="ntf-J4-MeX" secondAttribute="bottom" id="IAp-nN-UMM"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.70588235290000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="liH-g9-f7n" firstAttribute="height" secondItem="df0-f8-lXj" secondAttribute="height" id="4Dl-d2-UQy"/>
+                        <constraint firstAttribute="bottom" secondItem="df0-f8-lXj" secondAttribute="bottom" id="4vj-ta-Aqh"/>
+                        <constraint firstItem="liH-g9-f7n" firstAttribute="leading" secondItem="df0-f8-lXj" secondAttribute="trailing" id="8Wa-2q-3Nc"/>
+                        <constraint firstItem="liH-g9-f7n" firstAttribute="leading" secondItem="df0-f8-lXj" secondAttribute="trailing" id="INN-gl-UEn"/>
+                        <constraint firstAttribute="height" constant="110" id="LGE-99-vUe"/>
+                        <constraint firstAttribute="trailing" secondItem="liH-g9-f7n" secondAttribute="trailing" id="Sgr-0p-Zqa"/>
+                        <constraint firstItem="df0-f8-lXj" firstAttribute="leading" secondItem="a5S-hg-iqP" secondAttribute="leading" id="TG1-tw-Wm8"/>
+                        <constraint firstItem="liH-g9-f7n" firstAttribute="width" secondItem="df0-f8-lXj" secondAttribute="width" id="YXS-k8-3wh"/>
+                        <constraint firstAttribute="bottom" secondItem="liH-g9-f7n" secondAttribute="bottom" id="jnp-qi-SJb"/>
+                        <constraint firstItem="liH-g9-f7n" firstAttribute="top" secondItem="a5S-hg-iqP" secondAttribute="top" id="sJ0-bL-P5O"/>
+                        <constraint firstItem="df0-f8-lXj" firstAttribute="top" secondItem="a5S-hg-iqP" secondAttribute="top" id="yiS-4j-a6u"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7tk-6s-Jgd">
+                    <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                    <color key="backgroundColor" red="0.96048218011856079" green="0.96879202127456665" blue="0.96452134847640991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="znU-xr-moj"/>
+                        <outlet property="delegate" destination="-1" id="lgm-r8-NCf"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7tk-6s-Jgd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9zQ-zl-dW2"/>
+                <constraint firstAttribute="trailing" secondItem="a5S-hg-iqP" secondAttribute="trailing" id="Eua-aV-Rvd"/>
+                <constraint firstItem="7tk-6s-Jgd" firstAttribute="top" secondItem="a5S-hg-iqP" secondAttribute="bottom" id="FIb-Xa-Gmt"/>
+                <constraint firstItem="a5S-hg-iqP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="p16-ek-pus"/>
+                <constraint firstItem="a5S-hg-iqP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qcm-6A-soS"/>
+                <constraint firstAttribute="bottom" secondItem="7tk-6s-Jgd" secondAttribute="bottom" id="tvS-MX-xds"/>
+                <constraint firstAttribute="trailing" secondItem="7tk-6s-Jgd" secondAttribute="trailing" id="vgJ-y9-DJS"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="workBench_sign" width="39" height="39"/>
+        <image name="workBench_thread" width="39" height="39"/>
+    </resources>
 </document>

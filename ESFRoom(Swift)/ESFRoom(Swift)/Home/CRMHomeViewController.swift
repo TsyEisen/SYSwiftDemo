@@ -12,8 +12,11 @@ class CRMHomeViewController: SYBaseViewController,UITableViewDataSource,UITableV
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topView: UIView!
-    var headerView = CRMHomeHeaderView.viewFromNib()
+    @IBOutlet weak var monthBtn: UIButton!
+    let headerView = CRMHomeHeaderView.viewFromNib()
+    let datePicker = CRMDatePicker(mode: .date)
     var datas:Array<Any>?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,9 @@ class CRMHomeViewController: SYBaseViewController,UITableViewDataSource,UITableV
         tableView.tableHeaderView = headerView
     }
     
+    @IBAction func chooseMonths() {
+        datePicker.show()
+    }
     //MARK:-UITableView数据源
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

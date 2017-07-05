@@ -17,19 +17,10 @@ class SYTabBarController: UITabBarController {
         tabBar.barTintColor = UIColor.white
         tabBar.backgroundColor = UIColor.white
         
-        addBtn.addTarget(self, action:Selector("addNewMessage"), for: .touchUpInside)
+        addBtn.addTarget(self, action:#selector(addNewMessage), for: .touchUpInside)
         tabBar.addSubview(addBtn)
         
-        let array = NSArray(contentsOfFile: Bundle.main.path(forResource: "controllerInfor", ofType: ".plist")!)!
-        for info in array {
-            
-            let vcInfor = info as! Dictionary<String, String>
-            let controller = vcInfor["controller"]
-            let title = vcInfor["title"]
-            let image = vcInfor["image"]
-            
-            addchildviewController(controller: controller, title: title, image: image)
-        }
+        setUpViewControllers()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,7 +41,34 @@ class SYTabBarController: UITabBarController {
                 break
             }
         }
+    }
+    
+    @objc private func addNewMessage() {
+        print("发布")
+    }
+    
+    private lazy var addBtn:UIButton = {
         
+       let btn = UIButton(frame:CGRect(x:(ScreenW - 49)*0.5, y: 5.5, width: 49, height: 38))
+        btn.setBackgroundImage(UIImage(named:"add"), for: UIControlState.normal)
+        btn.setBackgroundImage(UIImage(named:"add_hover"), for: UIControlState.highlighted)
+        return btn
+        
+    }()
+}
+
+extension SYTabBarController {
+    private func setUpViewControllers() {
+        let array = NSArray(contentsOfFile: Bundle.main.path(forResource: "controllerInfor", ofType: ".plist")!)!
+        for info in array {
+            
+            let vcInfor = info as! Dictionary<String, String>
+            let controller = vcInfor["controller"]
+            let title = vcInfor["title"]
+            let image = vcInfor["image"]
+            
+            addchildviewController(controller: controller, title: title, image: image)
+        }
     }
     
     private func addchildviewController(controller:String?,title:String?,image:String?) {
@@ -85,19 +103,5 @@ class SYTabBarController: UITabBarController {
         
         addChildViewController(nav)
     }
-    
-    private func addNewMessage() {
-        print("发布")
-    }
-    
-    private lazy var addBtn:UIButton = {
-        
-       let btn = UIButton(frame:CGRect(x:(ScreenW - 49)*0.5, y: 5.5, width: 49, height: 38))
-        
-        btn.setBackgroundImage(UIImage(named:"add"), for: UIControlState.normal)
-        btn.setBackgroundImage(UIImage(named:"add_hover"), for: UIControlState.highlighted)
-        
-        return btn
-    }()
     
 }
