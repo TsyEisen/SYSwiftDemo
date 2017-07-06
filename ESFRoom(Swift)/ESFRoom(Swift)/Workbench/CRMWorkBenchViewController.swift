@@ -20,8 +20,8 @@ class CRMWorkBenchViewController: SYBaseViewController,UITableViewDelegate,UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "CRM"
-        topView.backgroundColor = UIColor.appMainColor()
+        navigationItem.title = "CRM"
+        topView.backgroundColor = UIColor.appMainColor
         tableView.sy_registerNib(cellclass: CRMWorkBenchCell.self)
     }
     
@@ -39,7 +39,7 @@ class CRMWorkBenchViewController: SYBaseViewController,UITableViewDelegate,UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CRMWorkBenchCell.sy_classNameString()) as! CRMWorkBenchCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CRMWorkBenchCell.sy_classNameString) as! CRMWorkBenchCell
         cell.dataDict = datas[indexPath.row]
         return cell
     }

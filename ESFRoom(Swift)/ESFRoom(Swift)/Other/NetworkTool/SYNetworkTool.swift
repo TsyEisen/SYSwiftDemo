@@ -14,19 +14,27 @@ class SYNetworkTool: NSObject {
     private override init() {}
     
     func requestData(requestModel:SYRequest,completion:@escaping (_ result:[String: AnyObject],_ error:Error?)->Void){
-        request("\(baseUrl)\(requestModel.url)" , method:.get, parameters:requestModel.params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-            if(response.result.isSuccess){
-                if let value = response.result.value as? [String: AnyObject] {
-                    guard value["code"] as! String == "0000" else {
-                        print(value["message"] ?? "系统错误")
+        
+        let urlString = baseUrl + requestModel.url
+        request(urlString, method:requestModel.type, parameters:requestModel.params, encoding: URLEncoding.default, headers:["Content-Type": "application/json;charset=UTF-8"]).responseJSON { (response) in
+                if(response.result.isSuccess){
+                    let value = response.result.value as? [String: AnyObject]
+                    guard (value?.keys.contains("code"))! else {
+                        print("没有code错误",value?["message"] ?? "系统错误")
                         return
                     }
-                    completion(value["respBody"] as! [String : AnyObject], nil)
+                    guard value?["code"] as! String == "200" else {
+                        print("code不为200",value?["message"] ?? "系统错误")
+                        return
+                    }
+                    guard (value?.keys.contains("respBody"))! else {
+                        print("没有respBody",value?["message"] ?? "系统错误")
+                        return
+                    }
+                    completion(value!["respBody"] as! [String : AnyObject], nil)
                 }else {
                     print("服务器故障")
                 }
             }
-            
         }
-    }
 }

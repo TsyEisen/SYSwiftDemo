@@ -13,7 +13,7 @@ class SYNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationBar.barTintColor = UIColor.appMainColor()
+        navigationBar.barTintColor = UIColor.appMainColor
         navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue:UIColor.white,NSAttributedStringKey.font.rawValue:UIFont.systemFont(ofSize: 17)]
         navigationBar.isTranslucent = false
         navigationBar.shadowImage = UIImage()

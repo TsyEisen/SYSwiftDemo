@@ -14,9 +14,7 @@ extension UIColor {
         self.init(red: CGFloat((rgb & 0xFF0000) >> 16) / 256.0, green: CGFloat((rgb & 0x00FF00) >> 8) / 256.0, blue:CGFloat(rgb & 0x0000FF) / 256.0, alpha: alpha)
     }
     
-    class func appMainColor() -> UIColor {
-//        return UIColor(red: 0, green: 180.0/255.0, blue: 1, alpha: 1)
+    class var appMainColor : UIColor {
         return UIColor(rgb: 0x00B4FF)
     }
-    
 }

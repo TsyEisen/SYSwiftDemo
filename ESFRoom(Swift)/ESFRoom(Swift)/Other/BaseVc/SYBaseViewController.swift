@@ -15,5 +15,4 @@ class SYBaseViewController: UIViewController {
         extendedLayoutIncludesOpaqueBars = false;
         edgesForExtendedLayout = []
     }
-
 }

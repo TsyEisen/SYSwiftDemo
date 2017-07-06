@@ -23,8 +23,13 @@ class CRMHomeViewController: SYBaseViewController,UITableViewDataSource,UITableV
         tableView.sy_registerNib(cellclass: CRMHomeMainCell.self)
         tableView.sy_registerNib(cellclass: CRMHomeTitleCell.self)
         tableView.tableFooterView = UIView()
-        topView.backgroundColor = UIColor.appMainColor()
+        topView.backgroundColor = UIColor.appMainColor
         tableView.tableHeaderView = headerView
+        
+        let request = SYRequest.requestHomeData(date: "2017-06")
+        SYNetworkTool.sharedTool.requestData(requestModel: request) { (result, error) in
+            print(result)
+        }
     }
     
     @IBAction func chooseMonths() {
@@ -41,10 +46,10 @@ class CRMHomeViewController: SYBaseViewController,UITableViewDataSource,UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CRMHomeTitleCell.sy_classNameString())
+            let cell = tableView.dequeueReusableCell(withIdentifier: CRMHomeTitleCell.sy_classNameString)
             return cell!
         }else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CRMHomeMainCell.sy_classNameString())
+            let cell = tableView.dequeueReusableCell(withIdentifier: CRMHomeMainCell.sy_classNameString)
             return cell!
         }
     }

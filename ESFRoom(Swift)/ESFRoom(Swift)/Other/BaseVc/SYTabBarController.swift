@@ -13,7 +13,7 @@ class SYTabBarController: UITabBarController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        tabBar.tintColor = UIColor.appMainColor()
+        tabBar.tintColor = UIColor.appMainColor
         tabBar.barTintColor = UIColor.white
         tabBar.backgroundColor = UIColor.white
         
@@ -44,7 +44,10 @@ class SYTabBarController: UITabBarController {
     }
     
     @objc private func addNewMessage() {
-        print("发布")
+//        print("发布")
+//        let loginVC = CRMLoginViewController(nibName: CRMLoginViewController.sy, bundle: nil)
+        let loginVc = CRMLoginViewController(nibName: CRMLoginViewController.sy_classNameString, bundle: nil)
+        present(loginVc, animated: true, completion: nil)
     }
     
     private lazy var addBtn:UIButton = {

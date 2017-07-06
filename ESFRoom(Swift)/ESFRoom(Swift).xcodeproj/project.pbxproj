@@ -20,6 +20,12 @@
 		F07BA2E71F0CD1C100EF68F5 /* CRMDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BA2E61F0CD1C100EF68F5 /* CRMDatePicker.swift */; };
 		F07BA2EA1F0CECCE00EF68F5 /* CRMWorkBenchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BA2E81F0CECCE00EF68F5 /* CRMWorkBenchCell.swift */; };
 		F07BA2EB1F0CECCE00EF68F5 /* CRMWorkBenchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07BA2E91F0CECCE00EF68F5 /* CRMWorkBenchCell.xib */; };
+		F07BA2EE1F0DD11F00EF68F5 /* CRMMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BA2EC1F0DD11F00EF68F5 /* CRMMessageCell.swift */; };
+		F07BA2EF1F0DD11F00EF68F5 /* CRMMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07BA2ED1F0DD11F00EF68F5 /* CRMMessageCell.xib */; };
+		F07BA2F31F0DD7E900EF68F5 /* UIView+SYExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BA2F21F0DD7E900EF68F5 /* UIView+SYExtension.swift */; };
+		F07BA2F71F0E0B4D00EF68F5 /* CRMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BA2F51F0E0B4D00EF68F5 /* CRMLoginViewController.swift */; };
+		F07BA2F81F0E0B4D00EF68F5 /* CRMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07BA2F61F0E0B4D00EF68F5 /* CRMLoginViewController.xib */; };
+		F08970831F0E25BA00067E24 /* SYAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08970821F0E25BA00067E24 /* SYAccountManager.swift */; };
 		F09FFAAE1F049A9D00BE8342 /* SYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C720F61F0497B000ADECDF /* SYTabBarController.swift */; };
 		F09FFAB01F049AC600BE8342 /* SYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C720F21F0497B000ADECDF /* SYBaseViewController.swift */; };
 		F09FFAB11F049AC600BE8342 /* SYNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C720F51F0497B000ADECDF /* SYNavigationController.swift */; };
@@ -73,6 +79,12 @@
 		F07BA2E61F0CD1C100EF68F5 /* CRMDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMDatePicker.swift; sourceTree = "<group>"; };
 		F07BA2E81F0CECCE00EF68F5 /* CRMWorkBenchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMWorkBenchCell.swift; sourceTree = "<group>"; };
 		F07BA2E91F0CECCE00EF68F5 /* CRMWorkBenchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CRMWorkBenchCell.xib; sourceTree = "<group>"; };
+		F07BA2EC1F0DD11F00EF68F5 /* CRMMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMMessageCell.swift; sourceTree = "<group>"; };
+		F07BA2ED1F0DD11F00EF68F5 /* CRMMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CRMMessageCell.xib; sourceTree = "<group>"; };
+		F07BA2F21F0DD7E900EF68F5 /* UIView+SYExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SYExtension.swift"; sourceTree = "<group>"; };
+		F07BA2F51F0E0B4D00EF68F5 /* CRMLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMLoginViewController.swift; sourceTree = "<group>"; };
+		F07BA2F61F0E0B4D00EF68F5 /* CRMLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CRMLoginViewController.xib; sourceTree = "<group>"; };
+		F08970821F0E25BA00067E24 /* SYAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYAccountManager.swift; sourceTree = "<group>"; };
 		F09FFAC91F04D76500BE8342 /* CRMHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMHomeHeaderView.swift; sourceTree = "<group>"; };
 		F09FFACB1F04D7F400BE8342 /* CRMHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CRMHomeHeaderView.xib; sourceTree = "<group>"; };
 		F09FFACD1F04E38500BE8342 /* CRMHomeMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMHomeMainCell.swift; sourceTree = "<group>"; };
@@ -144,6 +156,8 @@
 		9F2F7E621F07FF3700F60F20 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F07BA2EC1F0DD11F00EF68F5 /* CRMMessageCell.swift */,
+				F07BA2ED1F0DD11F00EF68F5 /* CRMMessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +198,7 @@
 		F069E2821F02099100818AB5 /* ESFRoom(Swift) */ = {
 			isa = PBXGroup;
 			children = (
+				F07BA2F41F0E0ADE00EF68F5 /* Login */,
 				9F2F7E611F07FF3700F60F20 /* Message */,
 				9F2F7E631F07FF3700F60F20 /* Mine */,
 				9F2F7E5B1F07FC8300F60F20 /* Workbench */,
@@ -212,6 +227,15 @@
 				F07BA2E61F0CD1C100EF68F5 /* CRMDatePicker.swift */,
 			);
 			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		F07BA2F41F0E0ADE00EF68F5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F07BA2F51F0E0B4D00EF68F5 /* CRMLoginViewController.swift */,
+				F07BA2F61F0E0B4D00EF68F5 /* CRMLoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		F0C720E71F04970F00ADECDF /* Home */ = {
@@ -265,6 +289,7 @@
 			children = (
 				F0C720F81F0497B000ADECDF /* SYNetworkTool.swift */,
 				F0C720F91F0497B000ADECDF /* SYRequest.swift */,
+				F08970821F0E25BA00067E24 /* SYAccountManager.swift */,
 			);
 			path = NetworkTool;
 			sourceTree = "<group>";
@@ -301,6 +326,7 @@
 				F0C721101F0497B000ADECDF /* UIColor+SYExtension.swift */,
 				F09FFAD71F04E78C00BE8342 /* NSObject+SYExtension.swift */,
 				F0B4D1241F04EADE000826F3 /* UITableView+SYExtension.swift */,
+				F07BA2F21F0DD7E900EF68F5 /* UIView+SYExtension.swift */,
 			);
 			path = SYExtension;
 			sourceTree = "<group>";
@@ -366,11 +392,13 @@
 			files = (
 				F09FFAD01F04E38500BE8342 /* CRMHomeMainCell.xib in Resources */,
 				9F2F7E6C1F07FF5E00F60F20 /* CRMMineViewController.xib in Resources */,
+				F07BA2EF1F0DD11F00EF68F5 /* CRMMessageCell.xib in Resources */,
 				9F2F7E601F07FCCB00F60F20 /* CRMWorkBenchViewController.xib in Resources */,
 				9F2F7E6E1F0801E200F60F20 /* controllerInfor.plist in Resources */,
 				F09FFAD41F04E39600BE8342 /* CRMHomeTitleCell.xib in Resources */,
 				F07BA2EB1F0CECCE00EF68F5 /* CRMWorkBenchCell.xib in Resources */,
 				9F2F7E681F07FF4C00F60F20 /* CRMMessageViewController.xib in Resources */,
+				F07BA2F81F0E0B4D00EF68F5 /* CRMLoginViewController.xib in Resources */,
 				F069E28E1F02099100818AB5 /* LaunchScreen.storyboard in Resources */,
 				F09FFACC1F04D7F400BE8342 /* CRMHomeHeaderView.xib in Resources */,
 				F0B4D12B1F05007A000826F3 /* CRMHomeViewController.xib in Resources */,
@@ -395,6 +423,7 @@
 				F09FFAB41F049AC600BE8342 /* AFError.swift in Sources */,
 				F09FFAB51F049AC600BE8342 /* Alamofire.h in Sources */,
 				F09FFAB61F049AC600BE8342 /* Alamofire.swift in Sources */,
+				F08970831F0E25BA00067E24 /* SYAccountManager.swift in Sources */,
 				F09FFAB71F049AC600BE8342 /* DispatchQueue+Alamofire.swift in Sources */,
 				F09FFACF1F04E38500BE8342 /* CRMHomeMainCell.swift in Sources */,
 				F09FFAB81F049AC600BE8342 /* Info-tvOS.plist in Sources */,
@@ -417,10 +446,13 @@
 				F07BA2EA1F0CECCE00EF68F5 /* CRMWorkBenchCell.swift in Sources */,
 				F09FFACA1F04D76500BE8342 /* CRMHomeHeaderView.swift in Sources */,
 				F09FFAC41F049AC600BE8342 /* TaskDelegate.swift in Sources */,
+				F07BA2F31F0DD7E900EF68F5 /* UIView+SYExtension.swift in Sources */,
+				F07BA2F71F0E0B4D00EF68F5 /* CRMLoginViewController.swift in Sources */,
 				F09FFAC51F049AC600BE8342 /* Timeline.swift in Sources */,
 				F09FFAC61F049AC600BE8342 /* Validation.swift in Sources */,
 				F09FFAC71F049AC600BE8342 /* UIColor+SYExtension.swift in Sources */,
 				F09FFAAE1F049A9D00BE8342 /* SYTabBarController.swift in Sources */,
+				F07BA2EE1F0DD11F00EF68F5 /* CRMMessageCell.swift in Sources */,
 				F069E2841F02099100818AB5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,7 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5Z3XUN2VRQ;
+				DEVELOPMENT_TEAM = VE878NZ38N;
 				INFOPLIST_FILE = "ESFRoom(Swift)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -561,7 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5Z3XUN2VRQ;
+				DEVELOPMENT_TEAM = VE878NZ38N;
 				INFOPLIST_FILE = "ESFRoom(Swift)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -62,7 +62,7 @@ class CRMDatePicker: NSObject {
         let flexi = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         let doneBtn = UIBarButtonItem(title: "完成", style: .done, target: self, action: #selector(doneBtnClick))
-        doneBtn.tintColor = UIColor.appMainColor()
+        doneBtn.tintColor = UIColor.appMainColor
         
         toolbar.setItems([cancelBtn,flexi,doneBtn], animated: false)
         return toolbar

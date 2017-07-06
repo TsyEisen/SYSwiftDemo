@@ -9,7 +9,9 @@
 import Foundation
 
 extension NSObject {
-    class func sy_classNameString() -> String {
+    class var sy_classNameString : String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
+    
+    
 }
