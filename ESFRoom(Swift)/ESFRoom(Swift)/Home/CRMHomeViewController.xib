@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CRMHomeViewController" customModule="ESFRoom_Swift_" customModuleProvider="target">
             <connections>
                 <outlet property="monthBtn" destination="Rm1-lx-CCJ" id="sbD-BU-Zdi"/>
+                <outlet property="salepriceLabel" destination="un2-MU-qGv" id="q5Q-60-WZu"/>
                 <outlet property="tableView" destination="D5e-ba-eLb" id="agG-dl-86q"/>
                 <outlet property="topView" destination="75a-RV-3xw" id="FIi-uh-Mwx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

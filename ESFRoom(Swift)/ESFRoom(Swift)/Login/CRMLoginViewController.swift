@@ -26,7 +26,6 @@ class CRMLoginViewController: SYBaseViewController {
     }
     
     @IBAction func loginAction() {
-//        SYAccountManager.manager.login(account: userTextField.text!, password: passwordTextField.text!
         SYAccountManager.manager.login(account: userTextField.text!, password: passwordTextField.text!) { (status) in
             if status {
                  self.dismiss(animated: true, completion: nil)

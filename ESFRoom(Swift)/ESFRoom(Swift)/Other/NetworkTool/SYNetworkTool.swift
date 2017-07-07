@@ -14,9 +14,14 @@ class SYNetworkTool: NSObject {
     private override init() {}
     
     func requestData(requestModel:SYRequest,completion:@escaping (_ result:[String: AnyObject],_ error:Error?)->Void){
-        
+        if requestModel.url != "/to/Login" {
+            if requestModel.params == nil {
+                requestModel.params = [:]
+            }
+            requestModel.params!["loginCode"] = SYAccountManager.manager.user.loginCode
+        }
         let urlString = baseUrl + requestModel.url
-        request(urlString, method:requestModel.type, parameters:requestModel.params, encoding: URLEncoding.default, headers:["Content-Type": "application/json;charset=UTF-8"]).responseJSON { (response) in
+        request(urlString, method:requestModel.type, parameters:requestModel.params, encoding: URLEncoding.default, headers:["Content-Type": "application/json"]).responseJSON { (response) in
                 if(response.result.isSuccess){
                     let value = response.result.value as? [String: AnyObject]
                     guard (value?.keys.contains("code"))! else {

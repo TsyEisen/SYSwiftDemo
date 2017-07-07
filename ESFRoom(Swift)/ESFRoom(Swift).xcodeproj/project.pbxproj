@@ -26,6 +26,9 @@
 		F07BA2F71F0E0B4D00EF68F5 /* CRMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BA2F51F0E0B4D00EF68F5 /* CRMLoginViewController.swift */; };
 		F07BA2F81F0E0B4D00EF68F5 /* CRMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07BA2F61F0E0B4D00EF68F5 /* CRMLoginViewController.xib */; };
 		F08970831F0E25BA00067E24 /* SYAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08970821F0E25BA00067E24 /* SYAccountManager.swift */; };
+		F08970851F0F368F00067E24 /* CRMUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08970841F0F368F00067E24 /* CRMUserModel.swift */; };
+		F08970881F0F3EF400067E24 /* CRMHomeTopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08970871F0F3EF400067E24 /* CRMHomeTopData.swift */; };
+		F089708A1F0F70C800067E24 /* CRMPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08970891F0F70C800067E24 /* CRMPerson.swift */; };
 		F09FFAAE1F049A9D00BE8342 /* SYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C720F61F0497B000ADECDF /* SYTabBarController.swift */; };
 		F09FFAB01F049AC600BE8342 /* SYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C720F21F0497B000ADECDF /* SYBaseViewController.swift */; };
 		F09FFAB11F049AC600BE8342 /* SYNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C720F51F0497B000ADECDF /* SYNavigationController.swift */; };
@@ -85,6 +88,9 @@
 		F07BA2F51F0E0B4D00EF68F5 /* CRMLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMLoginViewController.swift; sourceTree = "<group>"; };
 		F07BA2F61F0E0B4D00EF68F5 /* CRMLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CRMLoginViewController.xib; sourceTree = "<group>"; };
 		F08970821F0E25BA00067E24 /* SYAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYAccountManager.swift; sourceTree = "<group>"; };
+		F08970841F0F368F00067E24 /* CRMUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMUserModel.swift; sourceTree = "<group>"; };
+		F08970871F0F3EF400067E24 /* CRMHomeTopData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMHomeTopData.swift; sourceTree = "<group>"; };
+		F08970891F0F70C800067E24 /* CRMPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMPerson.swift; sourceTree = "<group>"; };
 		F09FFAC91F04D76500BE8342 /* CRMHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMHomeHeaderView.swift; sourceTree = "<group>"; };
 		F09FFACB1F04D7F400BE8342 /* CRMHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CRMHomeHeaderView.xib; sourceTree = "<group>"; };
 		F09FFACD1F04E38500BE8342 /* CRMHomeMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMHomeMainCell.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 				9F2F7E5B1F07FC8300F60F20 /* Workbench */,
 				F0C720E71F04970F00ADECDF /* Home */,
 				F0C720F01F0497B000ADECDF /* Other */,
+				F08970861F0F3EB700067E24 /* Model */,
 				F069E2831F02099100818AB5 /* AppDelegate.swift */,
 				F069E28A1F02099100818AB5 /* Assets.xcassets */,
 				F069E28C1F02099100818AB5 /* LaunchScreen.storyboard */,
@@ -236,6 +243,15 @@
 				F07BA2F61F0E0B4D00EF68F5 /* CRMLoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		F08970861F0F3EB700067E24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F08970871F0F3EF400067E24 /* CRMHomeTopData.swift */,
+				F08970891F0F70C800067E24 /* CRMPerson.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F0C720E71F04970F00ADECDF /* Home */ = {
@@ -290,6 +306,7 @@
 				F0C720F81F0497B000ADECDF /* SYNetworkTool.swift */,
 				F0C720F91F0497B000ADECDF /* SYRequest.swift */,
 				F08970821F0E25BA00067E24 /* SYAccountManager.swift */,
+				F08970841F0F368F00067E24 /* CRMUserModel.swift */,
 			);
 			path = NetworkTool;
 			sourceTree = "<group>";
@@ -415,6 +432,7 @@
 			files = (
 				F0B4D12A1F05007A000826F3 /* CRMHomeViewController.swift in Sources */,
 				F09FFAD81F04E78C00BE8342 /* NSObject+SYExtension.swift in Sources */,
+				F08970881F0F3EF400067E24 /* CRMHomeTopData.swift in Sources */,
 				F09FFAB01F049AC600BE8342 /* SYBaseViewController.swift in Sources */,
 				F09FFAD31F04E39600BE8342 /* CRMHomeTitleCell.swift in Sources */,
 				F09FFAB11F049AC600BE8342 /* SYNavigationController.swift in Sources */,
@@ -451,9 +469,11 @@
 				F09FFAC51F049AC600BE8342 /* Timeline.swift in Sources */,
 				F09FFAC61F049AC600BE8342 /* Validation.swift in Sources */,
 				F09FFAC71F049AC600BE8342 /* UIColor+SYExtension.swift in Sources */,
+				F089708A1F0F70C800067E24 /* CRMPerson.swift in Sources */,
 				F09FFAAE1F049A9D00BE8342 /* SYTabBarController.swift in Sources */,
 				F07BA2EE1F0DD11F00EF68F5 /* CRMMessageCell.swift in Sources */,
 				F069E2841F02099100818AB5 /* AppDelegate.swift in Sources */,
+				F08970851F0F368F00067E24 /* CRMUserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

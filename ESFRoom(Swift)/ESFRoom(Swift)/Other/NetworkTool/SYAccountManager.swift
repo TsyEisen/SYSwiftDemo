@@ -10,7 +10,7 @@ import UIKit
 
 class SYAccountManager: NSObject {
     static let manager = SYAccountManager()
-    
+    private(set) var user : CRMUserModel = CRMUserModel()
     func login(account:String,password:String,completion:@escaping(_ status:Bool)->Void) {
         let request = SYRequest.requestLogin(account: account, password: password)
         SYNetworkTool.sharedTool.requestData(requestModel: request) { (result, error) in

@@ -13,10 +13,17 @@ class CRMHomeViewController: SYBaseViewController,UITableViewDataSource,UITableV
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var monthBtn: UIButton!
+    @IBOutlet weak var salepriceLabel: UILabel!
+    
     let headerView = CRMHomeHeaderView.viewFromNib()
     let datePicker = CRMDatePicker(mode: .date)
-    var datas:Array<Any>?
     
+    var topData:CRMHomeTopData? {
+        didSet {
+            salepriceLabel.text = String(describing: topData?.salesAvgPrice)
+        }
+    }
+    var datas:Dictionary<String, Any>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +33,17 @@ class CRMHomeViewController: SYBaseViewController,UITableViewDataSource,UITableV
         topView.backgroundColor = UIColor.appMainColor
         tableView.tableHeaderView = headerView
         
-        let request = SYRequest.requestHomeData(date: "2017-06")
-        SYNetworkTool.sharedTool.requestData(requestModel: request) { (result, error) in
+        CRMHomeTopData.sy_objectWithKeyValues(dict: ["12":"23"])
+    }
+    
+    func requestData() {
+        let requestTop = SYRequest.requestHomeTopData(date: "2017-06")
+        SYNetworkTool.sharedTool.requestData(requestModel: requestTop) { (result, error) in
+            print(result)
+        }
+        
+        let requestBottom = SYRequest.requestHomeBottomData(date: "2017-06")
+        SYNetworkTool.sharedTool.requestData(requestModel: requestBottom) { (result, error) in
             print(result)
         }
     }

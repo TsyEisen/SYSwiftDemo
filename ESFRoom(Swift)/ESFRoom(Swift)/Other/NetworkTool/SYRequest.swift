@@ -28,10 +28,17 @@ class SYRequest: NSObject {
         return request
     }
     
-    class func requestHomeData(date:String) -> SYRequest {
+    class func requestHomeTopData(date:String) -> SYRequest {
         let request = SYRequest()
         request.url = "/crm/mainInfo/myAchievement"
-        request.params = ["loginCode":"WK_CRMUSER_1498198966577918_4126561041121285","month":date]
+        request.params = ["month":date]
+        return request
+    }
+    
+    class func requestHomeBottomData(date:String) -> SYRequest {
+        let request = SYRequest()
+        request.url = "/crm/mainInfo/rankList"
+        request.params = ["month":date]
         return request
     }
 }
